@@ -1,0 +1,23 @@
+﻿<div data-ng-controller="photoGridController as vm">
+    <div class="row">
+        <div class="col-md-2">
+            <label>Enter Image URL</label>
+        </div>
+        <div class="col-md-4 input-group">
+            <input type="text" class="form-control" data-ng-model="vm.formInputs.urlInput" />
+            <span class="input-group-btn">
+                <button class="btn" data-ng-click="vm.addWebSite(vm.formInputs.urlInput)"><i class="fa fa-plus"></i></button>
+            </span>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div data-ng-repeat="image in vm.images">
+                <div class="col-md-3 img-thumbnail">
+                    <img class="img-responsive" src="data:image/{{image.extension}};base64,{{image.image64String}}">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

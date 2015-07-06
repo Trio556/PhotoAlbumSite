@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="photoAlbum">
+<head>
+    <title></title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+    <script src="Scripts/jquery-2.1.4.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="Scripts/grayscale.js"></script>
+    <script src="main.js"></script>
+    <script src="Factories/cacheFactory.js"></script>
+    <script src="Sites/photoGrid/photoGridController.js"></script>
+    <script src="Sites/photoGrid/photoGridService.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/grayscale.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="row">
+                <div class="panel">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div class="h1"><label>Photo Album Demo</label></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <nav class="navbar navbar-custom" role="navigation">
+                                <div class="container">
+                                    <div class="navbar-header">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                                            <i class="fa fa-bars"></i>
+                                        </button>
+                                    </div>
+                                    <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+                                        <ul class="nav navbar-nav">
+                                            <li role="presentation"><a data-ng-href="#/">Home</a></li>
+                                            <li role="presentation"><a data-ng-href="#/photoAlbum">Album</a></li>
+                                            <li role="presentation"><a data-ng-href="#/about">About</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel">
+                    <div class="panel-body">
+                        <div data-ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
